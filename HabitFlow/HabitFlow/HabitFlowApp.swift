@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct HabitFlowApp: App {
+    @StateObject var vm = HabitViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeView()
+                .environmentObject(vm)
         }
     }
 }
